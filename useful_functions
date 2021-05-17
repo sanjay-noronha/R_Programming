@@ -1,0 +1,58 @@
+1. Generic
+    1. getwd()
+    2. list.files()
+2. Looking at data
+    1. dim()
+    2. nrow()
+    3. ncol()
+    4. class()
+    5. name()
+    6. object.size()
+    7. head()
+    8. tail()
+    9. summary() - gives us quartiles e.g. box plot output
+    10. table() - The 'landmass' variable in our dataset takes on integer values between 1 and 6, each of which represents a different part of the world. Use table(flags$landmass) to see how many flags/countries fall into each group.
+    11. str()
+3. Simulating data
+    1. sample()
+    2. LETTERS
+    3.  Each probability distribution in R has an 
+        1. r*** function (for "random"), a
+        2.  d*** function (for "density"), a 
+        3. p*** (for "probability"), and 
+        4. q*** (for "quantile"). 
+    4. rbinom(trial, observation, probability)
+4. Graphics
+    1. 1 of the greatest strengths of R, relative to other programming languages, is the ease with which we can create publication-quality graphics. 
+    2. plot()
+        1. The formula interface y ~ x
+        2. pct = plotting characters
+        3. xlim - range of x axis
+        4. c = 2 (color of points
+        5. title, subtitle
+    3. Arguments like "col" and "pch" may not seem very intuitive. And that is because they aren't! So, many/most people use more modern packages, like ggplot2, for creating their graphics in
+    4.  When looking at a single variable, histograms are a useful tool. hist() is the associated R function. Like plot(), hist() is best used by just passing in a single vector.
+    5. boxplot()
+    6. hist()
+5. Sub-Setting of vectors
+    1. logical-> x [is.na(x)] 
+    2. positive integer -> x[1:10], x[c(2,6)] 
+    3. negative integer -> x [ - c(2,10)]
+    4. named vector ->  vect <- c(foo = 11, bar = 2, norf = NA)
+    5. identical() function
+6. Vector
+    1. length()
+    2. attributes()
+    3. dim()
+7. Matrix
+    1. matrix()
+    2. cbind()
+    3. Has same data type
+8. data frame
+    1. colnames()
+9. apply functions
+    1. The Split-Apply-Combine Strategy for Data Analysis
+    2. Scenario - find the class of each column of a data frame
+    3. range() - min and max
+    4. You might think of vapply() as being 'safer' than sapply(), since it requires you to specify the format of the output in advance
+    5. As a data analyst, you'll often wish to split your data up into groups based on the value of some variable, then apply a function to the members of each group. The next function we'll look at, tapply(), does exactly that.
