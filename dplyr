@@ -17,3 +17,10 @@ Code:
 * The first step of working with data in dplyr is to load the data into what the package authors call a 'data frame tbl' or 'tbl_df'
   The main advantage to using a tbl_df over a regular data frame is the printing.
   cran <- tbl_df(mydf) 
+
+* select
+  - select(cran, ip_id, package, country)
+  - select(cran, r_arch:country) #consecutive columns
+  - select(cran, -time) #omitting certain columns
+  
+* filter
