@@ -32,3 +32,14 @@ Code:
 * arrange [ Sometimes we want to order the rows of a dataset according to the values of a particular variable. This is the job of arrange() ]
  - arrange(cran2, ip_id)
  - arrange(cran2, desc(ip_id)) # in descending order
+ - arrange(cran2, country, desc(r_version), ip_id)# sorting by multiple columns
+
+
+* mutate [It's common to create a new variable based on the value of one or more variables already in a dataset. The mutate() function does exactly this. ]
+ -  mutate(cran3, size_mb = size / 2^20) # adding a new variable to the table
+ - mutate(cran3, size_mb = size / 2^20, size_gb = size_mb / 2^10) # can create new variables based on previous new variables
+ 
+ * summarize [ The last of the five core dplyr verbs, summarize(), collapses the dataset to a single row. 
+               summarize() can give you the requested value FOR EACH group in your dataset.]
+  - summarize(cran, avg_bytes = mean(size))
+  - 
