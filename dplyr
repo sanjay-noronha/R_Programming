@@ -18,9 +18,17 @@ Code:
   The main advantage to using a tbl_df over a regular data frame is the printing.
   cran <- tbl_df(mydf) 
 
-* select
+* select [ Filter columns ]
   - select(cran, ip_id, package, country)
   - select(cran, r_arch:country) #consecutive columns
   - select(cran, -time) #omitting certain columns
+   
+* filter [ Filter rows ]
+  - filter(cran, package == "swirl")
+  - filter(cran, r_version == "3.1.1", country == "US") # multiple AND criteria
+  - filter(cran, country == "US" | country == "IN") # OR criteria
+  _ filter(cran, !is.na(r_version)) # ignore NA rows of column = r_version
   
-* filter
+* arrange [ Sometimes we want to order the rows of a dataset according to the values of a particular variable. This is the job of arrange() ]
+ - arrange(cran2, ip_id)
+ - arrange(cran2, desc(ip_id)) # in descending order
