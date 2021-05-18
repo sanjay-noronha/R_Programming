@@ -10,7 +10,7 @@ arrays.
 
 Tags:
 -----
-data frame, data frame table, dplyr, cran, 
+data frame, data frame table, dplyr, cran, select, filter, mutate, arrange, summarize
 
 Code:
 -----
@@ -29,7 +29,7 @@ Code:
   - filter(cran, country == "US" | country == "IN") # OR criteria
   _ filter(cran, !is.na(r_version)) # ignore NA rows of column = r_version
   
-* arrange [ Sometimes we want to order the rows of a dataset according to the values of a particular variable. This is the job of arrange() ]
+* arrange [ Sometimes we want to ORDER the rows of a dataset according to the values of a particular variable. This is the job of arrange() ]
  - arrange(cran2, ip_id)
  - arrange(cran2, desc(ip_id)) # in descending order
  - arrange(cran2, country, desc(r_version), ip_id)# sorting by multiple columns
@@ -42,4 +42,3 @@ Code:
  * summarize [ The last of the five core dplyr verbs, summarize(), collapses the dataset to a single row. 
                summarize() can give you the requested value FOR EACH group in your dataset.]
   - summarize(cran, avg_bytes = mean(size))
-  - 
