@@ -13,7 +13,7 @@ arrays.
 
 Tags:
 -----
-data frame, data frame table, dplyr, cran, select, filter, mutate, arrange, summarize
+data frame, data frame table, dplyr, cran, select, filter, mutate, arrange, summarize, quantile, group_by
 
 Code:
 -----
