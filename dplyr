@@ -57,3 +57,8 @@ Code:
                       countries = n_distinct(country),
                       avg_bytes = mean(size)) # can use multiple summary functions
    - filter(pack_sum, count > quantile(pack_sum$count, probs = 0.99) # pick up the top 1 percentile
+
+* Chaining [ %>% ]
+ - The benefit of %>% is that it allows us to chain the function calls in a linear fashion. 
+ - The code to the right of %>% operates on the result from the code to the left of %>%.
+| 
