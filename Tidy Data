@@ -1,0 +1,24 @@
+This file contains key points based on the following article : http://vita.had.co.nz/papers/tidy-data.pdf
+
+
+
+Key points:
+==========
+
+* The principles of tidy data are closely tied to those of relational databases and Codd’s relational algebra (Codd 1990), but are framed in a language familiar to statisticians.
+* Like families, tidy datasets are all alike but every messy dataset is messy in its own way
+* Most statistical datasets are rectangular tables made up of rows and columns. The columnsare almost always labelled and the rows are sometimes labelled
+* A dataset is a collection of values, usually either numbers (if quantitative) or strings (ifqualitative). Values are organised in two ways. 
+  Every value belongs to a variable and an observation.
+* So what is tidy data?
+  - In tidy data, each variable forms a column
+  - Each observation forms a row. This is important in lieu of a pivot table.
+  - Each type of observational unit forms a table
+  - This is Codd’s 3rd normal form (Codd 1990), but with the constraints framed in statistical language
+  - Fixed variables should come first, followed by measured variables, each ordered so that related variables are contiguous
+
+* Types of MESSY datasets:
+  - Column headers are values, not variable names [ Fixed by melting into key + value columns]
+    - This is an example of a pivot table
+    - Can be fixed with 2 new columns i.e. key and value
+ -  Multiple variables stored in one column [ Fixed by melting and splitting ]
