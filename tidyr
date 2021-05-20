@@ -3,8 +3,22 @@ Specifically, tidy data satisfies three conditions:
 2) Each observation forms a row
 3) Each type of observational unit forms a table
 
+Tags:
+gather, spread, separate
+
 Problem : Column headers that are values, not variable names
-Solution : gather(students, sex, count, -grade) # gather all columns except grade, gather them under 'sex' and their values under 'count'
+Solution : 
+- gather(students, sex, count, -grade) # gather all columns except grade, gather them under 'sex' and their values under 'count'
+- gather( class,grade ,class1 : class5 , na.rm = TRUE) # remove NAs and use multiple key classes
 
 Problem: multiple variables are stored in one column
-Solution :
+Solution : Apart from using gather, one can use the following to break column values : separate(res, sex_class, c("sex", "class"))
+
+Here is the above using Chaining:
+  students2 %>%
+  gather(sex_class, count , -grade ) %>%
+  separate(sex_class, c("sex", "class")) %>%
+  print
+
+Problem: variables are stored in both rows and columns.
+Solution:  to create a pivot table use : spread( test, grade)  # the values of test become column names and the value of grade is their value
