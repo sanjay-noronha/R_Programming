@@ -18,5 +18,7 @@ Key points:
 * Types of MESSY datasets:
   - Column headers are values, not variable names [ Fixed by melting into key + value columns]
     - This is an example of a pivot table
-    - Can be fixed with 2 new columns i.e. key and value
+    - Can be fixed with 2 new columns i.e. key and value [ This process is called melting ]
  -  Multiple variables stored in one column [ Fixed by melting and splitting ]
+ - Variables are stored in both rows and columns
+ - Multiple types in one table [ This is a concept of normalization. Basically break up data into multiple tables if not normalized]
