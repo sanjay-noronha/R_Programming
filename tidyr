@@ -22,3 +22,6 @@ Here is the above using Chaining:
 
 Problem: variables are stored in both rows and columns.
 Solution:  to create a pivot table use : spread( test, grade)  # the values of test become column names and the value of grade is their value
+
+Problem : multiple observational units are stored in the same table
+Solution : Use select() to break into sub tables and use unique() to remove duplicates. Use chaining i.e. %>%
