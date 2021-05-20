@@ -25,3 +25,6 @@ Solution:  to create a pivot table use : spread( test, grade)  # the values of t
 
 Problem : multiple observational units are stored in the same table
 Solution : Use select() to break into sub tables and use unique() to remove duplicates. Use chaining i.e. %>%
+
+Problem : Single observational unit is stored in multiple tables.
+Solution : add new column and use function bind_rows() to merge tables
