@@ -1,0 +1,10 @@
+Specifically, tidy data satisfies three conditions:
+1) Each variable forms a column
+2) Each observation forms a row
+3) Each type of observational unit forms a table
+
+Problem : Column headers that are values, not variable names
+Solution : gather(students, sex, count, -grade) # gather all columns except grade, gather them under 'sex' and their values under 'count'
+
+Problem: multiple variables are stored in one column
+Solution :
