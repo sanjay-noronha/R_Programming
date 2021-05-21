@@ -22,3 +22,9 @@ Key points:
  -  Multiple variables stored in one column [ Fixed by melting and splitting ]
  - Variables are stored in both rows and columns
  - Multiple types in one table [ This is a concept of normalization. Basically break up data into multiple tables if not normalized]
+ 
+ * 4 fundamental verbs of data manipulation
+  - filter
+  - transform
+  - aggregate
+  - sort
