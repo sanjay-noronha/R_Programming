@@ -1,1 +1,33 @@
 
+Overview:
+Lubridate has a consistent, memorable syntax, that makes working with dates fun instead of frustrating.
+
+* Todays date:
+  this_day <- today()
+  
+* Other functions : day(),  month(), year(), hour(), minute(), second()
+
+* Day of week : wday(this_day, label = TRUE)
+
+* Get current date & time : now()
+
+* Parsing date functions:
+  - my_date <- ymd("1989-05-17")
+  - ymd_hms(dt1)
+  
+* lubridate is also capable of handling vectors of dates
+
+* Updating dates : The update() function allows us to update one or more components of a date-time.
+   - update(this_moment, hours = 8, minutes = 34, seconds = 55)
+   
+* Date arithmetic
+  - depart <- nyc + days(2)
+  - depart <- update(depart, hours = 17, minutes = 34)
+  - arrive <- depart + hours(15) + minutes(50)
+  
+ * Converting datetime to different time zones
+  - arrive <- with_tz(arrive, "Asia/Hong_Kong") # Had mentioned the TZ in the "arrive" variable.
+  
+  * Time between datetimes
+    - how_long <- interval(last_time, arrive)
+    - as.period(how_long) # Gives output like "12y 11m 8d 21H 24M 40S"
