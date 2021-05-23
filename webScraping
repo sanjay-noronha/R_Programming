@@ -1,0 +1,22 @@
+
+1. Consider a URL -> http://scholar.google.com/citations?user=HI-I6C0AAAAJ&hl=en
+   - Create a connection -> con <- url("http://scholar.google.com/citations?user=HI-I6C0AAAAJ&hl=en")
+   - Get the html ->  htmlCode <- readLines(con)
+   - Close connection -> close(con)
+   
+   
+2. Notes: Other packages:
+  - httr 
+    - Can be used for websites with user id, password. Allows you to pass these login credentials
+    - Accessing APIs
+  - XML
+  - The concept of 'handle'. Get handle of the website and use it to access multiple times
+
+3. Read Twitter API 
+  - httr package
+  - Create a Twitter App. Get consumer keys
+  - Get tokens from Twitter
+  - use 'oauth' functions to log in
+  - use GET() # url can be obtained from twitter website
+  - Use RJson package to read Json
+  - Use jsonLite to convert json into data frame
