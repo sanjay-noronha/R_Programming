@@ -4,5 +4,7 @@
 * Link to an online MySQL database -> http://genome.ucsc.edu/goldenpath/help/mysql.html
 
 * Some examples of R functions for MySQL:
-  - uscDB <- dbConnect(MySQL(), user = "genome", host = "genome-mysql.soe.ucsc.edu")
+  - uscDB <- dbConnect(MySQL(), user = "genome", db = "x", host = "genome-mysql.soe.ucsc.edu")
   -  result <- dbGetQuery(uscDB, "show databases;") ; dbDisconnect(uscDB)
+  - store table in a date frame -> dbReadTable(db, tablename)
+  - dbSendQuery() # more optimal for large tables.
