@@ -1,12 +1,27 @@
 
 Objective : Want to build something that integrates with and extends GitHub
 
-Reference : https://docs.github.com/en/developers/apps/building-github-apps/creating-a-github-app
+
 
 Steps:
+
+1. Created an application.
+
+References:
+* https://github.com/r-lib/httr/blob/master/demo/oauth2-github.r # code
+* https://www.coursera.org/learn/data-cleaning/lecture/gIaQK/reading-from-apis
+* https://www.youtube.com/watch?v=xCPWRP_WqYQ # A good video explaining how to create an application
+* https://towardsdatascience.com/accessing-data-from-github-api-using-r-3633fb62cb08#.40dk13rdr # article based on above video
+
 * Go to your GitHub settings.
 * Select Applications > Developer applications tab.
 * Pick an existing application or hit Register new application.
-* Set a few parameters for your application and get the Client ID and Client Secret.
+* Set a few parameters for your application and get the Client ID and Client Secret
+* By creating an application I can access data on GitHub, which is only availale for people with an application credentials
+* Then I can use commands e.g. GET() to get Git detaile e.g. https://api.github.com/users/jtleek/repos
 
-Code: https://github.com/r-lib/httr/blob/master/demo/oauth2-github.r
+
+3. Write the code
+
+References:
+* https://github.com/r-lib/httr/blob/master/demo/oauth2-github.r # code
