@@ -1,1 +1,12 @@
 
+Objective : Want to build something that integrates with and extends GitHub
+
+Reference : https://docs.github.com/en/developers/apps/building-github-apps/creating-a-github-app
+
+Steps:
+* Go to your GitHub settings.
+* Select Applications > Developer applications tab.
+* Pick an existing application or hit Register new application.
+* Set a few parameters for your application and get the Client ID and Client Secret.
+
+Code: https://github.com/r-lib/httr/blob/master/demo/oauth2-github.r
