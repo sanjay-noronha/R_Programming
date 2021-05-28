@@ -1,0 +1,19 @@
+
+Useful functions:
+The functions below can be used to summarize data from a data frame:
+
+
+a. head()
+b. tail()
+c. summary()
+d.str()
+e. quantile()
+f. quantile(df, probs = 0.99) 
+g. table(df$column1, df$column2) # by default does not display NAs
+h. sum(is.na(df$var3)) # find the number of records in column = var3 which have NA values
+6. any(is.na(df$var3)) # are there any values in var3 which are NA
+7. colSums(df) # sum all column values
+8. rowSums(df)
+9. colSums(is.na(df))  #for each column display the number of rows with NA values
+10. table( df$var1 %in% c(1,2)) # create a binary of number of (1,2) values vs rest
+
