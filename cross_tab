@@ -1,0 +1,11 @@
+# Let us get some data
+> data(UCBAdmissions)
+> DF <- as.data.frame(UCBAdmissions)
+> DF
+
+# Now to create the cross tab
+xtabs( Freq ~  Admit + Gender, data = DF)
+where
+ * freq = numeric values
+ * Admit = along the rows
+ * gender = along the columns
