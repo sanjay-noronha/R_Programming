@@ -1,0 +1,16 @@
+
+# create sequence variables
+seq(1,10)
+
+# create binary variables
+ifelse(df$zipcode < 0, TRUE, FALSE)
+
+# create categorical data
+# break zip codes by quantiles
+cut(df$zipcode, breaks = quantile(df$zipcode))
+
+# create factor variables
+factor()
+
+# create new variables with logic
+mutate()
