@@ -3,9 +3,18 @@ References:
 * https://www.r-bloggers.com/2012/04/melt/
 
 ##Firstly It is important to have data sets to play with
-##
+> data()
 
 > data(mtcars)
-> mtcars
 
-library(reshape2)
+# melt - make data tabular
+ meltedcars <- melt(mtcars, id = c("carname", "gear", "cyl"), measure.vars = c("mpg", "hp"))
+ 
+ # cross tab
+ dcast(meltedcars, cyl ~ variable)
+
+
+
+# using tapply() to sum along a column
+> data(InsectSprays)
+> tapply(InsectSprays$count, InsectSprays$spray, sum)
