@@ -1,1 +1,11 @@
 
+References:
+* https://www.r-bloggers.com/2012/04/melt/
+
+##Firstly It is important to have data sets to play with
+##
+
+> data(mtcars)
+> mtcars
+
+library(reshape2)
