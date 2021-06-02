@@ -24,3 +24,6 @@ COMBINE - sapply(sumData, sum)
 
 
 #plyr package has many more functions
+
+# broadcasting 
+
