@@ -13,8 +13,14 @@ References:
  # cross tab
  dcast(meltedcars, cyl ~ variable)
 
-
-
 # using tapply() to sum along a column
 > data(InsectSprays)
 > tapply(InsectSprays$count, InsectSprays$spray, sum)
+
+# The concept of SPLIT- APPLY - COMBINE
+SPLIT - listData <- split(InsectSprays$count, InsectSprays$spray)
+APPLY - sumData <- lapply(listData, sum)
+COMBINE - sapply(sumData, sum)
+
+
+#plyr package has many more functions
