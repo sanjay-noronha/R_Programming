@@ -13,7 +13,7 @@ arrays.
 
 Tags:
 -----
-data frame, data frame table, dplyr, cran, select, filter, mutate, arrange, summarize, quantile, group_by
+data frame, data frame table, dplyr, cran, select, filter, mutate, arrange, summarize, quantile, group_by, rename
 
 Code:
 -----
@@ -21,11 +21,14 @@ Code:
   The main advantage to using a tbl_df over a regular data frame is the printing.
   cran <- tbl_df(mydf) 
 
-* select [ Filter columns ]
+* select [ Select columns ]
   - select(cran, ip_id, package, country)
   - select(cran, r_arch:country) #consecutive columns
   - select(cran, -time) #omitting certain columns
    
+* rename [ to rename columns]
+  - cran <- rename(cran, newVar = oldVar)
+  
 * filter [ Filter rows ]
   - filter(cran, package == "swirl")
   - filter(cran, r_version == "3.1.1", country == "US") # multiple AND criteria
