@@ -1,0 +1,7 @@
+
+# Equivalent to the SQL join functions
+
+person <- data.frame(id = c(1,2,3), watch_id = c(1,2,3), names = c("sanjay", "sonia", "suneer"))
+watch <- data.frame(id = c(1,2,3), watch_name = c("casio", "patek", "omega"))
+
+merge(person, watch, by.x = "watch_id", by.y = "id")
