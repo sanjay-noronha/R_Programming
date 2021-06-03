@@ -11,6 +11,10 @@ select(), filter(), arrange(), mutate(), and summarize()
 One unique aspect of dplyr is that the same set of tools allow you to work with tabular data from a variety of sources, including data frames, data tables, databases and multidimensional
 arrays. 
 
+Reference:
+---------
+https://www.coursera.org/learn/data-cleaning/lecture/bQ0Ba/managing-data-frames-with-dplyr-basic-tools
+
 Tags:
 -----
 data frame, data frame table, dplyr, cran, select, filter, mutate, arrange, summarize, quantile, group_by, rename
