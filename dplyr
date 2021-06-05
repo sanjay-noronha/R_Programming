@@ -56,7 +56,7 @@ Code:
  * group_by [ The main idea behind grouping data is that you want to break up your dataset into groups of rows based 
                on the values of one or more variables. The group_by() function is reponsible for
             ]
-   - group_by(cran, package)
+   - by_package <- group_by(cran, package)
    - summarize(by_package, mean(size)) # In this case the output will be grouped by package
    -  summarize(by_package,
                       count = n(),
