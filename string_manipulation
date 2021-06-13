@@ -1,0 +1,34 @@
+Generic functions:
+-------------------
+a. tolower()
+b. toupper()
+c. strsplit()
+d. gsub() # global substitution
+e. grep(), grepl()
+f. nchar() # number of characters in string
+g. substr()
+h. paste() # join multiple string
+i. trim()
+
+Regular expressions:
+-------------------
+The following functions are available in R:
+grep, grepl, sub and gsub 
+
+Problem:
+=======
+  * I have a string vector with the following values: "sanjay", "Noronha.1"
+  * Make all elements in lower case and get the string value before the '.'
+Solution:
+* sanjay <- c("sanjay", "Noronha.1")
+* sanjay <- tolower(sanjay)
+* sanjay <- strsplit(sanjay, "\\.") # class changes to list
+* x <- function(x) {x[1]}
+* sanjay <- sapply(sanjay, x) #back to a vector
+
+Problem:
+========
+* Replace all Commas with single space
+* sanjay <- "sanjay,anthony,noronha"
+* gsub(",", " ", sanjay)
+
