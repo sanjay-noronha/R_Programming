@@ -1,4 +1,10 @@
 
+Generic functions:
+- Sys.date()
+- format() 
+- as.Date() # turn character vectors to date
+- weekdays(), months(), julian() 
+
 Overview:
 Lubridate has a consistent, memorable syntax, that makes working with dates fun instead of frustrating.
 
