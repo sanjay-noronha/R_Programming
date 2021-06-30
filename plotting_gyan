@@ -1,0 +1,17 @@
+Model 1 - Base plotting system
+ - oldest system
+ - build piece by piece
+ - every plot is just a bunch of R code
+ 
+ 
+ Model 2 - Lattice plotting system
+ -  Single function with lots of parameters
+ - Good for putting many plots on the screen
+ - Has lots of default
+ 
+  Model 3 - gg2 plot
+    - Based on graphics grammar system
+    - Mixes ideas from above 2 systems
+    - has a different default aesthetic
+    
+Note: The 3 systems cannot be interchanged    
