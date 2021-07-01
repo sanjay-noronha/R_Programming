@@ -1,0 +1,25 @@
+- There are 2 phases to creating a base plot
+a. Create a new  plot
+b. Annotate an existing plot
+
+
+- Base graphics package has many parameters that can be tweaked. To see them use ?par
+
+
+- Examples
+- get example datasets
+  library(datasets)
+  
+- histogram
+  with(airquality, hist(Ozone))
+  
+- scatterplot
+  with(airquality, plot(Wind, Ozone))
+  
+- boxplot
+  airquality <- transform(airquality, Month = factor(Month)) # convert month into a factor
+  boxplot(Ozone ~ Month, airquality, xlab = "Month", ylab = "Ozone") # 1 box plot per group
+  
+  
+- base graphics parameters
+  * pch, xlab, ylab Etc
