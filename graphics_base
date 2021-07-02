@@ -23,3 +23,9 @@ b. Annotate an existing plot
   
 - base graphics parameters
   * pch, xlab, ylab Etc
+
+-- in this case I want a subset of data to have a different look and feel
+-- also adding legend
+> with(airquality, plot(Ozone, Wind, main = "pappu"))
+> with(subset(airquality, Month ==5), plot(Wind, Ozone, col = "blue"))
+> legend("topright", pch = 1, col = c("blue", "red"), legend = c("May", "Other months"))
