@@ -26,6 +26,7 @@ b. Annotate an existing plot
 
 -- in this case I want a subset of data to have a different look and feel
 -- also adding legend
-> with(airquality, plot(Ozone, Wind, main = "pappu"))
-> with(subset(airquality, Month ==5), plot(Wind, Ozone, col = "blue"))
-> legend("topright", pch = 1, col = c("blue", "red"), legend = c("May", "Other months"))
+with(airquality, plot(Ozone, Wind, main = "Title goes here"))
+par(new=TRUE) # do not clean the frame between plots
+with(subset(airquality, Month ==5), plot(Wind, Ozone, col = "blue"))
+legend("topright", pch = 1, col = c("blue", "red"), legend = c("May", "Other months"))
