@@ -30,3 +30,19 @@ with(airquality, plot(Ozone, Wind, main = "Title goes here"))
 par(new=TRUE) # do not clean the frame between plots
 with(subset(airquality, Month ==5), plot(Wind, Ozone, col = "blue"))
 legend("topright", pch = 1, col = c("blue", "red"), legend = c("May", "Other months"))
+
+-- plot a scatter plot of the data
+-- then add a regression line
+
+with(airquality, plot(Ozone, Wind)) # plot the scatterplot
+par(new = TRUE) # hold on to the plot
+model <- lm(Wind ~ Ozone, airquality) # fit a liner model
+abline(model) # plot the line
+
+-- Multi base plots
+  par(mfrow = c(1, 2))
+  with(airquality,{
+    plot(Ozone, Wind, main = "Ozone v. Wind")
+    plot(Ozone, Solar.R, main = "Ozone v. Solar R")
+  })
+
