@@ -15,6 +15,9 @@ b. Annotate an existing plot
   
 - scatterplot
   with(airquality, plot(Wind, Ozone))
+
+- Add a label at a certain (x,y) on the scatterplot
+  text(1, -2.75, "pappu")
   
 - boxplot
   airquality <- transform(airquality, Month = factor(Month)) # convert month into a factor
@@ -46,3 +49,12 @@ abline(model) # plot the line
     plot(Ozone, Solar.R, main = "Ozone v. Solar R")
   })
 
+
+--Another example to show the difference between plot() and points() + subsetting
+-- Factors in R are stored as a vector of integer values with a corresponding set of character values to use when the factor is displayed
+x <- rnorm(100)
+y <- rnorm(100)
+g <- gl(2, 50, labels = c("male", "female"))
+plot(x, y, type = "n")
+points(x[g == "male"], y[g == "male"])
+points(x[g == "female"], y[g == "female"], pch = 20, col = "red")
