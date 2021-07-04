@@ -58,3 +58,11 @@ g <- gl(2, 50, labels = c("male", "female"))
 plot(x, y, type = "n")
 points(x[g == "male"], y[g == "male"])
 points(x[g == "female"], y[g == "female"], pch = 20, col = "red")
+
+
+-- Writing to a graphical device
+> pdf("sanjay.pdf") # open device
+> plot(x,y)
+> title(main = "pappu")
+> dev.off() # close device
+
