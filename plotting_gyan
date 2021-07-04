@@ -15,3 +15,8 @@ Model 1 - Base plotting system
     - has a different default aesthetic
     
 Note: The 3 systems cannot be interchanged    
+
+A good exploratory graph:
+   1: To show causality, mechanism, explanation
+   2: To show multivariate data
+   3: To show comparisons
