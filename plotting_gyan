@@ -20,3 +20,8 @@ A good exploratory graph:
    1: To show causality, mechanism, explanation
    2: To show multivariate data
    3: To show comparisons
+
+What is multivariate data you might ask? 
+- In technical (scientific) literature this term means more than 2 variables. 
+- Two-variable plots are what you saw in high school algebra.  Remember those x,y plots when you were learning about slopes and intercepts and equations of lines?
+- They're valuable, but usually  questions are more complicated and require more variables.
