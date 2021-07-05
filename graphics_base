@@ -20,6 +20,7 @@ b. Annotate an existing plot
   text(1, -2.75, "pappu")
   
 - boxplot
+  quantile(x), summary(x) -- provides percentile data in text format
   airquality <- transform(airquality, Month = factor(Month)) # convert month into a factor
   boxplot(Ozone ~ Month, airquality, xlab = "Month", ylab = "Ozone") # 1 box plot per group
   
