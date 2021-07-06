@@ -12,6 +12,8 @@ b. Annotate an existing plot
   
 - histogram
   with(airquality, hist(Ozone))
+  rug(airquality) # a great function that adds a one dimension plot on the x-axis
+  hist(ppm, col = "green", breaks = 100)
   
 - scatterplot
   with(airquality, plot(Wind, Ozone))
@@ -42,6 +44,7 @@ with(airquality, plot(Ozone, Wind)) # plot the scatterplot
 par(new = TRUE) # hold on to the plot
 model <- lm(Wind ~ Ozone, airquality) # fit a liner model
 abline(model) # plot the line
+abline(v= median(ppm), col = "magenta", lwd = 4) # simple vertical line at the median
 
 -- Multi base plots
   par(mfrow = c(1, 2))
