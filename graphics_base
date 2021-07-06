@@ -15,6 +15,9 @@ b. Annotate an existing plot
   rug(airquality) # a great function that adds a one dimension plot on the x-axis
   hist(ppm, col = "green", breaks = 100)
   
+  - to get count of categorical values use 'table'
+  table(pollution$region)
+  
 - scatterplot
   with(airquality, plot(Wind, Ozone))
 
