@@ -5,10 +5,13 @@ b. Annotate an existing plot
 
 - Base graphics package has many parameters that can be tweaked. To see them use ?par
 
-
 - Examples
 - get example datasets
   library(datasets)
+  
+ - Subset
+ - the R command subset which, not surprisingly, returns subsets of vectors, matrices or data frames which meet conditions,
+   east <- subset(pollution, region == "east")
   
 - histogram
   with(airquality, hist(Ozone))
@@ -16,7 +19,11 @@ b. Annotate an existing plot
   hist(ppm, col = "green", breaks = 100)
   
   - to get count of categorical values use 'table'
-  table(pollution$region)
+    reg <- table(pollution$region)
+    
+  - barplot
+    We could use the above 'reg' in a barplot as follows
+    barplot(reg, col = "wheat", main = "Number of Counties in Each Region")
   
 - scatterplot
   with(airquality, plot(Wind, Ozone))
@@ -28,6 +35,7 @@ b. Annotate an existing plot
   quantile(x), summary(x) -- provides percentile data in text format
   airquality <- transform(airquality, Month = factor(Month)) # convert month into a factor
   boxplot(Ozone ~ Month, airquality, xlab = "Month", ylab = "Ozone") # 1 box plot per group
+  boxplot(pm25 ~ region, data =  pollution, col = "red") # similar to above
   
   
 - base graphics parameters
@@ -50,6 +58,7 @@ abline(model) # plot the line
 abline(v= median(ppm), col = "magenta", lwd = 4) # simple vertical line at the median
 
 -- Multi base plots
+  par(mfrow = c(2,1), mar=c(4, 4, 2,1)) # setting matrix and margins
   par(mfrow = c(1, 2))
   with(airquality,{
     plot(Ozone, Wind, main = "Ozone v. Wind")
