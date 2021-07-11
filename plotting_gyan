@@ -8,11 +8,15 @@ Model 1 - Base plotting system
  -  Single function with lots of parameters
  - Good for putting many plots on the screen
  - Has lots of default
+ - The lattice system is most useful for conditioning types of plots which display how y changes
+   with x across levels of z. The variable z might be a categorical variable of your data. This
+   system is also good for putting many plots on a screen at once.
  
   Model 3 - gg2 plot
     - Based on graphics grammar system
     - Mixes ideas from above 2 systems
     - has a different default aesthetic
+    - the package is based on a "grammar of graphics" (hence the gg in the name), so you can control the aesthetics of your plots.
     
 Note: The 3 systems cannot be interchanged    
 
