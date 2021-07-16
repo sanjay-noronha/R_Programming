@@ -15,7 +15,7 @@ b. Annotate an existing plot
   
 - histogram
   with(airquality, hist(Ozone))
-  rug(airquality) # a great function that adds a one dimension plot on the x-axis
+  rug(airquality) # a great function that adds a one dimension grayscale plot on the x-axis
   hist(ppm, col = "green", breaks = 100)
   
   - to get count of categorical values use 'table'
@@ -31,11 +31,18 @@ b. Annotate an existing plot
 - Add a label at a certain (x,y) on the scatterplot
   text(1, -2.75, "pappu")
   
+  -- Add a main title
+  mtext("Ozone and Weather in New York City", outer = TRUE)
+  
+ -- Add a legend
+ legend("topright", pch = c(17,8), col = c("blue", "red"), legend = c("May", "Other Months"))
+  
 - boxplot
   quantile(x), summary(x) -- provides percentile data in text format
   airquality <- transform(airquality, Month = factor(Month)) # convert month into a factor
   boxplot(Ozone ~ Month, airquality, xlab = "Month", ylab = "Ozone") # 1 box plot per group
   boxplot(pm25 ~ region, data =  pollution, col = "red") # similar to above
+  boxplot(Ozone~Month, airquality, xlab = "Month", ylab = "Ozone (ppb)", col.axis = "blue", col.lab = "red", main = "Ozone and Wind in New York City")
   
   
 - base graphics parameters
@@ -74,6 +81,12 @@ g <- gl(2, 50, labels = c("male", "female"))
 plot(x, y, type = "n")
 points(x[g == "male"], y[g == "male"])
 points(x[g == "female"], y[g == "female"], pch = 20, col = "red")
+
+-- Margins
+-- Margins are specified as 4-long vectors of integers. Each number tells how many lines of text to leave
+-- at each side. The numbers are assigned clockwise starting at the bottom. The default for the inner
+-- margin is c(5.1, 4.1, 4.1, 2.1) so you can see we reduced each of these so we'll have room for some
+-- outer text.
 
 
 -- Writing to a graphical device
