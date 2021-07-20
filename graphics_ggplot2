@@ -1,0 +1,8 @@
+
+-- Implementation of grammar of graphics, a book
+
+--  A powerful concept to organise different concepts to build a graphic
+
+-- Input is a data frame
+-- Factor variables are important e.g. gender, these are data subsets. Good labels are important.
+-- A plot is made of aesthetics (color ) and geoms (line, points)
