@@ -6,3 +6,24 @@
 -- Input is a data frame
 -- Factor variables are important e.g. gender, these are data subsets. Good labels are important.
 -- A plot is made of aesthetics (color ) and geoms (line, points)
+
+
+-- get sample data
+    str(mpg)
+    
+-- The Hello world of ggplot2
+   qplot(hwy, displ, data = mpg)
+   
+-- Introduce a another dimension via color
+   qplot(hwy, displ, data = mpg, col= drv)
+   
+-- Geometric objects (geoms) define the basic shape of the elements on the plot. Every geom has a default statistic. Every statistic has a default geom.
+   qplot(hwy, displ, data = mpg, geom = c("point", "smooth"))
+   qplot(hwy, displ, data = mpg) + geom_smooth(method = "lm") #Another method
+   
+-- passing one measure, gives a histogram
+   qplot(hwy, data = mpg, fill = drv)
+   
+-- FACETS
+-- Now rather than having everything in 1 plot, I want multiple i.e. 1 row and multiple columns
+   qplot(hwy, displ, data = mpg, facets = .~ drv)
