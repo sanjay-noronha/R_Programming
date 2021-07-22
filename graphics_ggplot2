@@ -27,3 +27,12 @@
 -- FACETS
 -- Now rather than having everything in 1 plot, I want multiple i.e. 1 row and multiple columns
    qplot(hwy, displ, data = mpg, facets = .~ drv)
+   
+   
+============================================================================================================================================
+   
+-- if you want more control , you can use the ggplot() function
+--  Components of a graphic -> data[data frame], aesthetics [color, size], geoms aka geometric objects [ points, lines, shapes] ..
+--  .. facets, stats ( e.g. smooth) 
+--  The artists pallette i.e. build up the solution in layers.
+   
