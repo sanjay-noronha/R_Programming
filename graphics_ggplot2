@@ -35,4 +35,8 @@
 --  Components of a graphic -> data[data frame], aesthetics [color, size], geoms aka geometric objects [ points, lines, shapes] ..
 --  .. facets, stats ( e.g. smooth) 
 --  The artists pallette i.e. build up the solution in layers.
+
+1. g <- ggplot(data = mpg, mapping = aes(cty, hwy))
+2.  Now I can add to the above -> g + geom_point()
+3. Now I can also add a smoother -> g + geom_point() + geom_smooth()
    
