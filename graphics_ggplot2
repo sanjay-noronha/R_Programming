@@ -39,4 +39,13 @@
 1. g <- ggplot(data = mpg, mapping = aes(cty, hwy))
 2.  Now I can add to the above -> g + geom_point()
 3. Now I can also add a smoother -> g + geom_point() + geom_smooth()
+
+Ex: Add scatterpoint + linear model + facets
+ggplot(mpg,aes(cty, hwy)) + geom_point() + geom_smooth(method = "lm") + facet_grid(~manufacturer)
+
+Ex: One can format text e.g. subscripts
+ggplot(mpg,aes(cty, hwy)) + geom_point() + geom_smooth(method = "lm") + labs(x = expression("log " * PM[2.5] )
+
+Ex: Changing a THEME
+ggplot(mpg,aes(cty, hwy)) + geom_point() + geom_smooth(method = "lm") + labs(x = expression("log " * PM[2.5] )) + theme_bw()
    
