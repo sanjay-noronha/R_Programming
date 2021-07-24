@@ -48,4 +48,10 @@ ggplot(mpg,aes(cty, hwy)) + geom_point() + geom_smooth(method = "lm") + labs(x =
 
 Ex: Changing a THEME
 ggplot(mpg,aes(cty, hwy)) + geom_point() + geom_smooth(method = "lm") + labs(x = expression("log " * PM[2.5] )) + theme_bw()
+
+
+============================================================================================================================================
+
+* Sometimes we need to categorize continuous data and we do this with the cut() function.
+
    
