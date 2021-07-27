@@ -1,16 +1,21 @@
 -- create high density plots
 --  need lattice package
 -- all plotting & annotation is built in a *single* function. Not a 2 phase system like the base system
--- formula notation
+-- formula notation e.g. y ~ x
 -- return an object of type trellis
 -- ideal for multiple condition plots i.e same plot under different conditions
+-- it is a powerful and elegant | high-level data visualization system with an emphasis on multivariate | data."
 
 -- Example 1 : xyplot(x ~ y | f * g , data)
+-- The f and g represent the optional conditioning variables. The * represents interaction between them. 
    xyplot(Ozone ~ Temp, airquality)
    
 -- Example 2 : Just one line to get all this functionality
    sapply(airquality, class) # get data type
    airquality$Month = factor(airquality$Month) # convert Month into factor
+   
+   xyplot(Ozone ~ Wind, data = airquality, pch = 8, col = "red",  main = "Big Apple Data")
+   xyplot(Ozone ~ Wind | as.factor(Month), data = airquality, layout = c(5,1))
    xyplot(Ozone ~ Wind | Month, airquality, layout = c(length(levels(airquality$Month)), 1)) # plot against months
    
    
