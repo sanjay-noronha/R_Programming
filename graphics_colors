@@ -1,8 +1,11 @@
 
 * The default color schemes for most plots in R are not optimal.
 * The function colors() represents the colors that we can use in a plotting function
+*  The alpha value is great when you have overlapping points.
 
 
+
+=====================
 > pal(seq(0,1, len=6))
      [,1] [,2] [,3]
 [1,]  255    0    0
@@ -17,3 +20,14 @@
 | the i-th row (for i=1,...6) differs from the (i-1)-st row in the following
 | way. Its red entry is 51 = 255/5 points lower and its blue entry is 51 points
 | higher.
+
+
+=====================
+The RColorBrewer Package, available on CRAN, contains interesting and useful color palettes, of which there are 3
+types, sequential, divergent, and qualitative. 
+Which one you would choose to use depends on your data
+
+ - Sequential palettes in which the colors are ordered from light to dark. 
+ - Divergent palettes -  Here the neutral color (white) is in the center, and as you move from the middle to the two ends of each
+   palette, the colors increase in intensity. T- 
+- Qualitative palettes which look like collections of random colors. These might  be used to distinguish factors in your data
