@@ -1,0 +1,3 @@
+* The idea is to use clustering to visualize data
+* To see which points are close, to group points
+* The question is firstly what is close - eucliidian or other?
