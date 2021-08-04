@@ -1,3 +1,11 @@
 * The idea is to use clustering to visualize data
 * To see which points are close, to group points
 * The question is firstly what is close - eucliidian or other?
+
+
+Steps:
+* use rnorm() to get x and y
+* use data.frame() to create df
+* use dist() to get the distance between points
+* use hclust() to get horizontal clustering
+* use plot() to plut the above object
