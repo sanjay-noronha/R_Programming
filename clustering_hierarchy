@@ -9,3 +9,14 @@ Steps:
 * use dist() to get the distance between points
 * use hclust() to get horizontal clustering
 * use plot() to plut the above object
+
+x <- rnorm(12, mean = rep(1:3, each = 4), sd = 0.2)
+y <- rnorm(12, mean = rep(1:3, each = 4), sd = 0.2)
+
+plot(x,y, col = "blue", pch = 19) # view the data
+
+df <- data.frame(x = x, y = y)
+
+dist <- dist(df)
+
+plot(hclust(dist))
