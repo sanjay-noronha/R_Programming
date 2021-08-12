@@ -1,0 +1,17 @@
+
+- K means is an iterative algo
+- Input:
+  - number of clusters
+  - the data e.g. (x, y)
+  - random cluster centroid points
+
+Logic:
+- Assign random cluster centroids depending on number of clusters we want
+- Now for each (x,y), assign to one of the above centroids
+- Having done so, now calculate the mean of the (x,y) 's
+- Now change the position of each cluster centroid to the new positions as per above means
+- Repeat till clusters do not change.
+
+What is the output of the K means algorithm?
+ - Where are the cluster centroids?
+ - With with cluster centroid is each (x,y) associated ?
