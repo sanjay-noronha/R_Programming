@@ -15,3 +15,13 @@ Logic:
 What is the output of the K means algorithm?
  - Where are the cluster centroids?
  - With with cluster centroid is each (x,y) associated ?
+ 
+Code:
+> x <- sample(1:100, 20)
+> y <- sample(1:100, 20)
+> df <- data.frame(x,y)
+> ggplot(df, aes(x,y)) + geom_point(colour = "blue") + geom_text(label = 1:20, nudge_y = 3, size = 3)
+> k <- kmeans(df, centers = 3)
+> library(dplyr)
+> df <- mutate(df, cluster = k$cluster)
+> ggplot(df, aes(x,y)) + geom_point(aes(colour = factor(cluster))) + geom_text(label = 1:20, nudge_y = 3, size = 3)
